@@ -1,17 +1,13 @@
 module SpecialMatrices
 
-using Compat
-using Compat.LinearAlgebra
+using LinearAlgebra
 using FFTW
 
-import Compat.LinearAlgebra: Matrix, inv
-if VERSION >= v"0.7.0"
-    import Compat.LinearAlgebra: mul!
-end
+import LinearAlgebra: Matrix, inv, mul!
 
 import Base: getindex, isassigned, size, *
 import Base.\
-    
+
 include("cauchy.jl") #Cauchy matrix
 include("companion.jl") #Companion matrix
 include("frobenius.jl") #Frobenius matrix
